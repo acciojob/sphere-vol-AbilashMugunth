@@ -1,6 +1,15 @@
-function volume_sphere() {
-    //Write your code here
-  
-} 
+let volumeInput = document.getElementById("volume");
+let calculate = document.getElementById("calculate");
 
-window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+function volume_sphere() {
+  let radiusInput = document.getElementById("radius").value;
+
+  const volume = (4 / 3) * Math.PI * Math.pow(radiusInput, 3);
+  console.log(radiusInput);
+  console.log(volume);
+  volumeInput.value = volume;
+}
+
+calculate.addEventListener("click", () => {
+  volume_sphere();
+});
